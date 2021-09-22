@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build && npm run export"
+  publish = "out"
+
+[[plugins]]
+  package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/contentful"
+
+  [plugins.inputs]
+    # Directory for the generated JSON data files to reside in
+    dataDir = "data"
