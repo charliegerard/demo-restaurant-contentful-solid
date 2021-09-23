@@ -16,6 +16,7 @@
     "@netlify/demo-restaurant-sites-data": "^0.3.1"
   },
   "dependencies": {
+    "solid-app-router": "^0.1.6",
     "solid-js": "^1.1.1"
   }
 }

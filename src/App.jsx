@@ -1,23 +1,24 @@
-import logo from "./logo.svg";
 import styles from "./App.module.css";
+import { lazy } from "solid-js";
+import { Routes, Route, Link } from "solid-app-router";
+import Layout from "./components/Layout";
+import Testimonials from "./components/Testimonials";
+
+const Menu = lazy(() => import("./pages/menu.jsx"));
+const Home = lazy(() => import("./pages/index.jsx"));
 
 function App() {
   return (
     <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
+      <Layout>
+        {/* <Link href="/">Home</Link>
+        <Link href="/menu">Menu</Link> */}
+        <Testimonials />
+      </Layout>
+      <Routes>
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
