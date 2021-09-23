@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build && npm run export"
-  publish = "out"
+  command = "npm run build"
+  publish = "dist"
 
 [[plugins]]
   package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/contentful"
