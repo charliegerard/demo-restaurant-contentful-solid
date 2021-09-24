@@ -3,6 +3,6 @@
   align-items: center;
   grid-template-rows: 200px 1fr 75px;
 }
-.main-footer {
+.mainFooter {
   align-self: end;
 }
