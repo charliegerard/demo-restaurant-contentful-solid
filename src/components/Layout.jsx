@@ -1,13 +1,15 @@
-import Nav from "./Nav";
+import Sidebar from "./Sidebar.jsx";
+import styles from "./Layout.module.css";
 import RestaurantInfo from "./RestaurantInfo";
+import "../../node_modules/contentfull-belly-styles/styles.css";
 
 function Layout({ children }) {
   return (
-    <div>
-      <Nav />
-      <RestaurantInfo />
+    <main className={styles.homegrid}>
+      <Sidebar />
+      {/* <RestaurantInfo /> */}
       {children}
-    </div>
+    </main>
   );
 }
 

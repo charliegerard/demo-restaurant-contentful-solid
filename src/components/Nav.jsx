@@ -1,12 +1,14 @@
-import { Link } from "solid-app-router";
+import NavItem from "./NavItem.jsx";
+import styles from "./Nav.module.css";
 
 export default function Nav() {
   return (
-    <nav className="container">
-      <section className="nav-links">
-        <Link href="/">Home</Link>
-        <Link href="/menu">Menu</Link>
-      </section>
+    <nav>
+      <ul className={styles.mainNavList}>
+        <NavItem text="Menu" />
+        <NavItem text="About" />
+        <NavItem text="Gallery" />
+      </ul>
     </nav>
   );
 }

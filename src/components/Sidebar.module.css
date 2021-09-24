@@ -1,0 +1,8 @@
+.sidebar {
+  display: grid;
+  align-items: center;
+  grid-template-rows: 200px 1fr 75px;
+}
+.main-footer {
+  align-self: end;
+}

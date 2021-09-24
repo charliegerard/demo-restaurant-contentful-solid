@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[dev]
+  command = "npm run start"
+  targetPort = 8888
+  framework = "#custom"
+
 [[plugins]]
   package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/contentful"
 

@@ -11,8 +11,6 @@ function App() {
   return (
     <div class={styles.App}>
       <Layout>
-        {/* <Link href="/">Home</Link>
-        <Link href="/menu">Menu</Link> */}
         <Testimonials />
       </Layout>
       <Routes>
