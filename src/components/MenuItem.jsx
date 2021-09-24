@@ -13,7 +13,11 @@ export default function MenuItem({ data }) {
   const dietaryOptions = (diets) => {
     return Object.keys(diets)
       .filter((d) => diets[d])
-      .map((t) => <DietIcon type={t} />);
+      .map((t) => (
+        <li>
+          <DietIcon type={t} />
+        </li>
+      ));
   };
 
   return (
@@ -25,9 +29,7 @@ export default function MenuItem({ data }) {
           {data.currency}
           {data.price}
         </span>
-        <ul className={styles.menuItemDiet}>
-          <li>{dietaryOptions(data.dietary)}</li>
-        </ul>
+        <ul className={styles.menuItemDiet}>{dietaryOptions(data.dietary)}</ul>
       </div>
       <p>{data.description}</p>
       {gallery.map((img) => (
