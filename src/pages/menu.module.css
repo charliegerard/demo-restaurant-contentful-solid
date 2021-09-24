@@ -1,0 +1,19 @@
+.menuPage {
+  margin: 80px;
+}
+.sectionTitle {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 10px;
+  margin-top: 20px;
+  margin-left: 1px;
+  background-color: #c83030;
+}
