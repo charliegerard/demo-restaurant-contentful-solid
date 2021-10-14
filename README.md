@@ -1,33 +1,22 @@
-## Usage
+# SolidJS + Contentful
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.js.org/) via `pnpm up -Lri`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/65a839a8-32ae-4c70-8be9-b85fceb8bba6/deploy-status)](https://app.netlify.com/sites/demo-restaurant-contentful-solid/deploys)
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+This is a [SolidJS](https://www.solidjs.com/) v1.1.1 starter demo project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://www.netlify.com)!
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+You can check out the [live demo](https://demo-restaurant-contentful-solid.netlify.app/) if you'd like!
 
-## Available Scripts
+## Installation options
 
-In the project directory, you can run:
+**Option one:** One-click deploy
 
-### `npm dev` or `npm start`
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/charliegerard/demo-restaurant-contentful-solid)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
 
-The page will reload if you make edits.<br>
+**Option two:** Manual clone
 
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+1. Clone this repo: `git clone https://github.com/charliegerard/demo-restaurant-contentful-solid.git`
+2. Navigate to the directory, install dependencies with `npm install` or `yarn` and then run `npm run dev`
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the demo locally.
+4. Make your changes. For example, you can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
