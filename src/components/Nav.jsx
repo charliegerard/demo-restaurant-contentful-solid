@@ -1,13 +1,12 @@
 import NavItem from "./NavItem.jsx";
-import styles from "./Nav.module.css";
+import RestaurantInfo from "../components/RestaurantInfo";
 
 export default function Nav() {
   return (
     <nav>
-      <ul className={styles.mainNavList}>
+      <RestaurantInfo />
+      <ul className="main-nav-list">
         <NavItem text="Menu" />
-        <NavItem text="About" />
-        <NavItem text="Gallery" />
       </ul>
     </nav>
   );

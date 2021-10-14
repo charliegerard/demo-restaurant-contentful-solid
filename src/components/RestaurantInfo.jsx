@@ -2,20 +2,30 @@ import info from "../../data/info.json";
 
 export default function RestaurantInfo() {
   return (
-    <section>
-      <h1>{info.name}</h1>
+    <section className="restaurant-info">
+      <h1>About:</h1>
       <section className="details">
-        <p>Address: {info.contact.streetAddress.join(" ")}</p>
-        <p>
-          Hours:{" "}
-          {info.hours.map((h) => (
-            <ul>
-              <li>{h}</li>
-            </ul>
-          ))}
-        </p>
-        <p>Contact: {info.contact.phone}</p>
+        <p>{info.contact.streetAddress.join(" ")}</p>
+        <p>{info.contact.phone}</p>
       </section>
+
+      <h1>Hours: </h1>
+      {info.hours.map((h) => (
+        <ul key={`hour-${h}`}>
+          <li>{h}</li>
+        </ul>
+      ))}
+
+      <style jsx>{`
+        ul {
+          margin: 0px;
+          padding: 2px 5px;
+        }
+
+        .restaurant-info {
+          padding: 5px;
+        }
+      `}</style>
     </section>
   );
 }

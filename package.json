@@ -13,7 +13,7 @@
     "vite": "^2.5.1",
     "vite-plugin-solid": "^2.0.3",
     "contentful": "^7.14.6",
-    "contentfull-belly-styles": "0.1.0-alpha",
+    "contentfull-belly-styles": "0.2.0-alpha",
     "@netlify/demo-restaurant-sites-data": "^0.3.1"
   },
   "dependencies": {

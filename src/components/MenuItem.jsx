@@ -1,45 +1,33 @@
 import DietIcon from "./DietIcon.jsx";
-import gallery from "../../data/gallery.json";
-import styles from "./MenuItem.module.css";
 
 export default function MenuItem({ data }) {
-  const displayCategory = (cat) => {
-    if (cat.length > 1) {
-      return <h1>{cat.join(" & ")}</h1>;
-    }
-    return <h1>{cat}</h1>;
-  };
-
   const dietaryOptions = (diets) => {
     return Object.keys(diets)
       .filter((d) => diets[d])
-      .map((t) => (
-        <li>
-          <DietIcon type={t} />
-        </li>
-      ));
+      .map((t, id) => <DietIcon type={t} key={id} />);
   };
 
   return (
-    <section key={data.title}>
-      {displayCategory(data.category)}
-      <div className={styles.menuItemHeader}>
-        <h3 className={styles.menuItemTitle}>{data.title}</h3>
-        <span className={styles.menuItemPrice}>
+    <section key={data.title} className="menu-item">
+      <div className="menu-item-header">
+        <h2 className="menu-item-title">{data.title}</h2>
+        <span className="menu-item-price">
           {data.currency}
           {data.price}
         </span>
-        <ul className={styles.menuItemDiet}>{dietaryOptions(data.dietary)}</ul>
+        <ul className="menu-item-diet">
+          <li>{dietaryOptions(data.dietary)}</li>
+        </ul>
       </div>
-      <p>{data.description}</p>
-      {gallery.map((img) => (
-        <img
-          className={styles.dishPhoto}
-          key={img.caption}
-          src={img.imageUrl}
-          alt={img.caption}
-        />
-      ))}
+      <p className="menu-item-description">{data.description}</p>
+
+      <img src={data.photo.imageUrl} alt={data.photo.caption} />
+
+      <style jsx>{`
+        img {
+          width: 40%;
+        }
+      `}</style>
     </section>
   );
 }
