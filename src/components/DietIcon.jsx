@@ -1,12 +1,13 @@
-import { createSignal, createEffect } from "solid-js";
+import { createSignal, createEffect, splitProps } from "solid-js";
 
-export default function DietIcon({ type }) {
+export default function DietIcon(props) {
+  const [local] = splitProps(props, ["type"]);
   const [foodType, setFoodType] = createSignal("");
 
   createEffect(() => displayType());
 
   const displayType = () => {
-    switch (type) {
+    switch (local.type) {
       case "vegetarian":
         setFoodType("V");
         break;
