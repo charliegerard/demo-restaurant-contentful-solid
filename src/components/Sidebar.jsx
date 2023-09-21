@@ -1,5 +1,5 @@
 import Nav from "./Nav.jsx";
-import { Link } from "solid-app-router";
+import { Link } from "@solidjs/router";
 import navLogo from "../assets/logo.svg";
 
 export default function Sidebar() {
