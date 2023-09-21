@@ -1,5 +1,5 @@
 import { lazy } from "solid-js";
-import { Routes, Route } from "solid-app-router";
+import { Routes, Route } from "@solidjs/router";
 import Layout from "./components/Layout";
 
 const Menu = lazy(() => import("./pages/menu.jsx"));
